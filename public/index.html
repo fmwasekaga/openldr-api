@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>OpenLDR API</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">   
+    <!-- Plugins CSS -->
+	<link rel="stylesheet" href="css/codemirror.css">
+	<link rel="stylesheet" href="css/docs.css">
+	
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-blue">
+
+	<div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">OpenLDR</span><span class="text-bold"> API</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Quick Start</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+		<div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Aug 22nd, 2022</div>
+                </div><!--//doc-header-->
+				<div class="doc-body">
+					<div class="doc-content">
+						<div class="content-inner">							
+							
+							
+							
+							<div class="--table-responsive" style="margin-bottom:16px;">
+								<div class = "tabinator">
+									<input type = "radio" id = "tab1" name = "openldr" checked>
+									<label for = "tab1">DOCUMENTATION</label>
+									<input type = "radio" id = "tab3" name = "openldr">
+									<label for = "tab3">API</label>
+									<div id = "content1">
+										
+										<section id="databases"  class="doc-section" style="padding-top:5px; padding-bottom:0px; margin-top:0px; margin-bottom:0px;">
+											<h2 class="section-title">Databases</h2>
+											<div class="section-block" style="padding-bottom:0px;"> 
+											
+												<div class="table-responsive">
+													<table class="table table-bordered table-striped">
+														<thead>
+															<tr>
+																<th>#</th>
+																<th>Name</th>
+																<th>Description</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row">1</th>
+																<td>OpenLDRData</td>
+																<td>Contain the actual test request and test result data</td>
+															</tr>
+															<tr>
+																<th scope="row">2</th>
+																<td>OpenLDRDict</td>
+																<td>Hold the standardized lists and coded information used for look-ups and supplemental information</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											
+											</div>
+										</section>
+										<section id="tables"  class="doc-section" style="padding-top:5px; padding-bottom:0px; margin-top:0px; margin-bottom:0px;">
+											<h2 class="section-title">Tables</h2>
+											<div class="section-block" style="padding-bottom:0px;"> 
+												<div class="--table-responsive" style="margin-bottom:0px;">
+													<div class = "tabinator">
+														<input type = "radio" id = "tab5" name = "openldrdata_tables" checked>
+														<label for = "tab5">OpenLDRData</label>
+														<input type = "radio" id = "tab6" name = "openldrdata_tables">
+														<label for = "tab6">OpenLDRDict</label>
+														<div id = "content5">												
+															<table class="table table-bordered table-striped">
+																<thead>
+																	<tr>
+																		<th>#</th>
+																		<th>Name</th>
+																		<th>Description</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">1</th>
+																		<td>Requests</td>
+																		<td>Represents the Observation Request, Patient Identity and Patient visit segments  (OBR/PID/PV1) of the HL7 message</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">2</th>
+																		<td>LabResults</td>
+																		<td>Contains all of the data that appears on a laboraotory report</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">3</th>
+																		<td>Monitoring</td>
+																		<td>Holds data from microbiology organism identifications and drug sensitivities</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">4</th>
+																		<td>VersionControl</td>
+																		<td>Contains version control data</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div id = "content6">												
+															<table class="table table-bordered table-striped">
+																<thead>
+																	<tr>
+																		<th>#</th>
+																		<th>Name</th>
+																		<th>Description</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">1</th>
+																		<td>Analyzers</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">2</th>
+																		<td>Drug_DrugClass</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">3</th>
+																		<td>Facilities</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">4</th>
+																		<td>HealthcareAreas</td>
+																		<td></td>
+																	</tr>
+																	
+																	<tr>
+																		<th scope="row">5</th>
+																		<td>HL7AbnormalFlagCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">6</th>
+																		<td>HL7EthnicGroupCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">7</th>
+																		<td>HL7PatientClassCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">8</th>
+																		<td>HL7ResultStatusCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">9</th>
+																		<td>HL7ResultTypeCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">10</th>
+																		<td>HL7SectionCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">11</th>
+																		<td>HL7SexCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">12</th>
+																		<td>HL7SpecimenSiteCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">13</th>
+																		<td>HL7SpecimenSourceCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">14</th>
+																		<td>Laboratories</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">15</th>
+																		<td>LOINC</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">16</th>
+																		<td>MDRCodes</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">17</th>
+																		<td>Organism_ReportingGroup</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">18</th>
+																		<td>Surveilance</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<th scope="row">19</th>
+																		<td>VersionControl</td>
+																		<td></td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>	
+										<section id="rest-api-section" class="doc-section" style="margin-top:0px; margin-bottom:0px;">
+											<h2 class="section-title">Rest API</h2>
+											<div class="section-block" style="padding-bottom:0px;"> 
+											
+												<div class="table-responsive">
+													<table class="table table-bordered table-striped">
+														<thead>
+															<tr>
+																<th style="width:38px;" style="width:38px;">#</th>
+																<th style="width:112px;">Info</th>
+																<th>Description</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th style="width:38px;" scope="row">1</th>
+																<td style="width:112px;/*background:#58bbee; color:#ffffff;*/ font-weight:bold;">Version</td>
+																<td>Version of API</td>
+															</tr>
+															<tr>
+																<th style="width:38px;" scope="row">2</th>
+																<td style="width:112px;/*background:#63b971; color:#ffffff;*/ font-weight:bold;">APIKey</td>
+																<td>Token used to identify the user and type of data user can manipulate</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											
+												<div class="table-responsive">
+													<table class="table table-bordered table-striped">
+														<thead>
+															<tr>
+																<th style="width:38px;">#</th>
+																<th style="width:112px;">Verb</th>
+																<th>Description</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th style="width:38px;" scope="row">1</th>
+																<td style="width:112px; /*background:#58bbee; color:#ffffff;*/ font-weight:bold;">GET</td>
+																<td>This would be used to fetch data from the OpenLDR</td>
+															</tr>
+															<tr>
+																<th style="width:38px;" scope="row">2</th>
+																<td style="width:112px; /*background:#63b971; color:#ffffff;*/ font-weight:bold;">POST</td>
+																<td>This would be used to insert data into OpenLDR if it does not exist</td>
+															</tr>
+															<tr>
+																<th style="width:38px;" scope="row">3</th>
+																<td style="width:112px; /*background:#f77e17; color:#ffffff;*/ font-weight:bold;">PUT</td>
+																<td>This would be used to update data in the OpenLDR if it exist</td>
+															</tr>
+															<tr>
+																<th style="width:38px;" scope="row">4</th>
+																<td style="width:112px; /*background:#f77b6b; color:#ffffff;*/ font-weight:bold;">DELETE</td>
+																<td>This would be used to delete data from OpenLDR if it exist</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												
+												<div class="table-responsive">
+													<table class="table table-bordered table-striped">
+														<thead>
+															<tr>
+																<th style="width:38px;">#</th>
+																<th style="width:112px;">Action</th>
+																<th>Description</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th style="width:38px;" scope="row">1</th>
+																<td style="width:112px;/*background:#58bbee; color:#ffffff;*/ font-weight:bold;">Requests</td>
+																<td>This would be used to manipulate lab requests with or without results and/or monitoring data</td>
+															</tr>
+															<tr>
+																<th style="width:38px;" scope="row">2</th>
+																<td style="width:112px;/*background:#63b971; color:#ffffff;*/ font-weight:bold;">Results</td>
+																<td>This would be used to manipulate lab results</td>
+															</tr>
+															<tr>
+																<th style="width:38px;" scope="row">3</th>
+																<td style="width:112px;/*background:#f77e17; color:#ffffff;*/ font-weight:bold;">Monitoring</td>
+																<td>This would be used to manipulate monitoring data</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											
+											</div>
+										</section>										
+									</div>
+									<div id = "content3">										
+										<section style="margin-top:0px;">
+											<div class="FlexDisplay Flex FlexRow" style="margin:8px 0px 8px 0px;">
+												<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px;">
+													<div class="icon">
+														<span class="mdi mdi-altimeter" />
+													</div>
+													<select class="versionSelector" onchange="onselect_change(this)">
+														<option selected="">Version 1</option>
+													</select>
+												</div>
+												
+												<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+													<div class="icon">
+														<span class="mdi mdi-wan" />
+													</div>
+													<select class="verbsSelector" onchange="onselect_change(this)">
+														<option selected="">GET</option>
+														<option >POST</option>
+														<option >PUT</option>
+														<option >DELETE</option>
+													</select>
+												</div>
+												
+												<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 0px 0px 4px;">
+													<div class="icon">
+														<span class="mdi mdi-code-braces" />
+													</div>
+													<select class="returnTypeSelector" onchange="onselect_change(this)">
+														<option selected="">JSON</option>
+														<option >XML</option>
+													</select>
+												</div>
+												
+												<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 0px 0px 4px; min-width:266px;">
+													<div class="icon">
+														<span class="mdi mdi-api" />
+													</div>
+													<select class="actionsSelector" onchange="onselect_change(this)" style="">
+														<option selected="">Request</option>
+														<option >Result</option>
+														<option >Monitoring</option>
+													</select>
+												</div>
+											</div>
+											<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 0px 8px 0px;">
+												<div class="icon">
+													<span class="mdi mdi-shield-key"></span>
+												</div>
+												<input id="apikey" type="text" placeholder="API key" value="12345678901234567890123456789012" style="padding-left:8px;"/>
+											</div>
+											<div class="ParametersControl FlexHidden Flex FlexRow" style="margin:0px; padding:0px; height:38px;">
+												<div class="FlexDisplay Flex" style="padding: 4px 0px 4px 18px;">
+													<span class="section-title">Parameters</span>
+												</div>
+												<div onclick="addParameter()" class="FlexDisplay btn-clear" style="width:36px;">
+													<div style="margin:auto auto; width:16px height:16px; font-size:20px;"><span class="mdi mdi-plus" style="margin:0px 2px;" /></div>
+												</div>
+											</div>
+											<div class="Parameters FlexDisplay Flex FlexColumn" style="margin-bottom:4px;"></div>
+											<div class="FlexDisplay Flex FlexRow " style=" background: #222; border-radius:4px;">
+												<code style="padding:10px; width:100%; font-size:11px;" id="urlkey"></code>
+												<div onclick="fetchData()" class="btn-color Divider-Left"  style="border-radius: 0 2px 2px 0; padding:6px 0px 0px 6px; font-size:16px; min-width:32px; max-width:32px;">
+													<span class="mdi mdi-magnify" style="width:100%; height:100%;"></span>
+												</div>
+											</div>
+											<div class="FlexHidden Flex FlexColumn Editors" style="margin:8px 0px 8px 0px; padding:0px;">
+												<div class="FlexDisplay Flex" style="padding: 4px 0px 4px 18px;">
+													<span class="section-title">Data</span>
+												</div>												
+												<div class="FlexDisplay Flex FlexRow" style="margin:8px 0px 8px 0px; padding:0px; height:512px; background-color: #282a36 !important; color: #f8f8f2 !important;">
+													<textarea id="code-editor" placeholder="data" style="padding:8px; resize:none; background:transparent; width:100%; height:100%; font-size:16px; border:none; outline:none; white-space:normal;"></textarea>
+												</div>
+											</div>
+											<div class="FlexHidden Flex FlexColumn Editors" style="margin:8px 0px 8px 0px; padding:0px;">
+												<div class="FlexDisplay Flex" style="padding: 4px 0px 4px 18px;">
+													<span class="section-title">Response</span>
+												</div>												
+												<div class="FlexDisplay Flex FlexRow" style="margin:8px 0px 8px 0px; padding:0px; height:512px; background-color: #282a36 !important; color: #f8f8f2 !important;">
+													<textarea id="code-viewer" placeholder="data" style="padding:8px; resize:none; background:transparent; width:100%; height:100%; font-size:16px; border:none; outline:none; white-space:normal;"></textarea>
+												</div>
+											</div>
+											
+										</section>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed by <a href="#" targe="_blank">Kaga Connect</a> for mirth</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="script/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script/prism.js"></script>    
+    <script type="text/javascript" src="script/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="script/jquery.matchHeight-min.js"></script>	
+	<script src="script/codemirror.js"></script>
+	<script src="script/mode/meta.js"></script>
+	<script src="script/mode/xml/xml.js"></script>
+	<script src="script/mode/javascript/javascript.js"></script>
+	<script src="script/mode/css/css.js"></script>
+	<script src="script/mode/htmlmixed/htmlmixed.js"></script>
+	<script src="script/addon/edit/matchbrackets.js"></script>		
+    <script type="text/javascript" src="script/main.js"></script>
+	
+	<script>
+		var codeEditor;
+		var codeViewer;
+		
+		function fetchData(){
+			var apikey = $("#apikey").val().trim();
+
+			if(!$("#apikey").parent().hasClass("is-invalid")){
+				var _url = $("#urlkey").text().trim();
+				
+				if(_url.length > 0){
+					var verb = $(".select-dropdown.verbsSelector").find(".current").text().toUpperCase();
+					var returnType = $(".select-dropdown.returnTypeSelector").find(".current").text().toLowerCase();
+					
+					if(verb == "POST" || verb == "PUT"){
+						if(codeEditor != undefined && codeEditor != null){
+							var data = codeEditor.doc.getValue();
+							fetch(_url, {
+								mode: 'cors',
+								cache: 'no-cache',
+								credentials: 'same-origin',
+								method: verb,
+								headers: {
+									'Content-Type': 'application/'+returnType.toLowerCase(),
+									'Authorization': 'Bearer '+apikey,
+								},
+								body: data
+							})
+							.then(async (response) => {
+								const res = response.text();
+								if (response.ok)return res;
+								throw new Error(await res);
+							})
+							.then((response) => {
+								$("#code-viewer").parents(".Editors").addClass("FlexDisplay");
+								if(codeViewer != undefined && codeViewer != null && returnType == "json")codeViewer.setContent(prettifyJson(JSON.parse(response)),"application/"+returnType.toLowerCase(),true);
+								else if(codeViewer != undefined && codeViewer != null && returnType == "xml")codeViewer.setContent(prettifyXml(OBJtoXML(response)),"application/"+returnType.toLowerCase(),true);						
+							})
+							.catch((error) => {
+								console.error('Error:', error);
+							});
+						}
+					}
+					else if(verb == "GET" || verb == "DELETE"){
+						var parameters = "";
+						$(".Parameters").children().each(function (index, value) {					
+							var _andOrSelector = $(this).find(".select-dropdown.and-or-Selector").find(".current").text();
+							var _itemSelector = $(this).find(".select-dropdown.itemSelector").find(".current").text();
+							var _equilazerSelector = getEqualizer($(this).find(".select-dropdown.equilazerSelector").find(".current").text());
+							
+							var _value = $(this).find(".ParameterValue").val().trim();
+							
+							if(_andOrSelector != undefined && _andOrSelector != null && _value.length > 0){
+								if(_itemSelector != undefined && _itemSelector != null && _itemSelector != "Choose.."){
+									if(_equilazerSelector != undefined && _equilazerSelector != null){
+										if(index == 0){
+											parameters += "?"+_itemSelector+"="+_equilazerSelector+"."+_value;
+										}
+										else{
+											parameters += "&"+_itemSelector+"."+_andOrSelector.toLowerCase()+"="+_equilazerSelector+"."+_value;
+										}
+									}
+								}
+							}
+						});
+					
+						if(parameters.length > 0){
+							fetch(_url,{
+								mode: 'cors', // no-cors, *cors, same-origin
+								cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+								credentials: 'same-origin', // include, *same-origin, omit
+								method: verb,
+								headers: {
+									'Content-Type': 'application/'+returnType.toLowerCase(),
+									'Authorization': 'Bearer '+apikey,
+								}
+							})
+							.then(async (response) => {
+								const res = response.text();
+								if (response.ok)return res;
+								throw new Error(await res);
+							})
+							.then((response) => {
+								$("#code-viewer").parents(".Editors").addClass("FlexDisplay");
+								if(codeViewer != undefined && codeViewer != null && returnType == "json")codeViewer.setContent(prettifyJson(JSON.parse(response)),"application/"+returnType.toLowerCase(),true);
+								else if(codeViewer != undefined && codeViewer != null && returnType == "xml")codeViewer.setContent(prettifyXml(OBJtoXML(response)),"application/"+returnType.toLowerCase(),true);
+							})
+							.catch((error) => {
+								console.error('Error:', error.message);
+							});
+						}
+						else console.error('Error:', "No parameters");
+					}
+				}
+			}
+		}
+		
+		function addParameter(){
+			var title = getActionTitle($(".select-dropdown.actionsSelector").find(".current").text().toLowerCase());
+			var obj = fetchObject(title);
+			var keys = Object.keys(obj);
+			
+			var item = '<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 0px 8px 0px; padding:0px;">';
+				item += '	<div class="icon Divider-Right" style="padding: 4px 0px 4px 18px; width:56px;">';
+				item += '		<span class="mdi mdi-information" />';
+				item += '	</div>';
+				item += '	<div class="Divider-Right" style="padding: 4px 0px 4px 8px; width:72px;">';
+				item += '		<select onchange="onselect_change(this)" class="and-or-Selector" style="padding:0px;">';
+				item += '			<option selected="">And</option>';
+				item += '			<option>Or</option>';
+				item += '		</select>';
+				item += '	</div>';
+				item += '	<div class="Divider-Right FlexDisplay Flex FlexGrow" style="padding: 4px 0px 4px 8px;">';
+				item += '		<select onchange="onselect_change(this)" class="itemSelector" style="padding:0px;">';
+				item += '			<option selected="">Choose..</option>';
+				for(var ii=0; ii<keys.length; ii++){
+					item += '			<option>'+keys[ii]+'</option>';
+				}
+				item += '			<option>Or</option>';
+				item += '		</select>';
+				item += '	</div>';
+				item += '	<div class="FlexDisplay Flex FlexGrow Divider-Right" style="padding: 4px 0px 4px 8px;">';
+				item += '		<select onchange="onselect_change(this)" class="equilazerSelector" style="padding:0px;">';
+				item += '			<option selected="">Equals</option>';
+				item += '			<option>Not Equal</option>';
+				item += '			<option>Like</option>';
+				item += '			<option>Not Like</option>';
+				item += '			<option>Greater Than</option>';
+				item += '			<option>Greater Than Or Equal</option>';
+				item += '			<option>Less Than</option>';
+				item += '			<option>Less Than Or Equal</option>';
+				item += '			<option>In</option>';
+				item += '			<option>Not In</option>';
+				item += '		</select>';
+				item += '	</div>';
+				item += '	<input class="FlexDisplay Flex FlexGrow-2 ParameterValue" type="text" placeholder="Value" style="padding: 4px 0px 4px 8px;"/>';
+				item += '	<div onclick="closeParameter(this)" class="icon btn-color Divider-Left"  style="border-radius: 0 4px 4px 0; padding-top:6px; height:38px; min-width:32px; max-width:32px;">';
+				item += '		<span class="mdi mdi-close" />';
+				item += '	</div>';
+				item += '</div>';
+				
+				$(".Parameters").append(item);
+				
+				create_custom_dropdowns();
+				
+				$(".Parameters").children().each(function (index, value) {
+					var _items = $(this).find(".select-dropdown").find(".list");
+					if(_items != undefined && _items != null){
+						_items.addClass("scroll scroll2");
+						_items.css({"overflow-y": "auto", "max-height": "128px"});
+					}
+					
+					$(this).find(".ParameterValue").off('change keydown paste input');
+					$(this).find(".ParameterValue").on('change keydown paste input', function(){
+						onselect_change(null);
+					});
+					
+				});
+		}
+		
+		function closeParameter(item){
+			$(item).parents(".form-control").remove();
+			onselect_change(null);
+		}
+		
+		function getAction(val){
+			if(val.startsWith("request")) return "requests";
+			else if(val.startsWith("result")) return "results";
+			else if(val.startsWith("monitoring")) return "monitoring";
+			return null;
+		}
+		
+		function getActionTitle(val){
+			if(val.startsWith("request")) return "Request";
+			else if(val.startsWith("result")) return "Result";
+			else if(val.startsWith("monitoring")) return "Monitor";
+			return null;
+		}
+		
+		function getEqualizer(value){
+			if(value == "Equals") return "eq";
+			else if(value == "Not Equal") return "nq";
+			else if(value == "Like") return "lk";
+			else if(value == "Not Like") return "nl";
+			else if(value == "Greater Than") return "gt";
+			else if(value == "Greater Than Or Equal") return "ge";
+			else if(value == "Less Than") return "lt";
+			else if(value == "Less Than Or Equal") return "le";
+			else if(value == "In") return "in";
+			else if(value == "Not In") return "ni";
+			return null;
+		}
+		
+		function resetActions(addAll, current){
+			var _actionsSelector = $(".select-dropdown.actionsSelector");
+			if(_actionsSelector != undefined && _actionsSelector != null){
+				_actionsSelector.remove();
+				
+				var _html = '<option '+(current == "Request" ? 'selected=""' : "")+'>Request</option>';
+				if(addAll)_html += '<option '+(current == "Request with results/monitoring" ? 'selected=""' : "")+'>Request with results/monitoring</option>';
+				_html += '<option '+(current == "Result" ? 'selected=""' : "")+'>Result</option>';
+				_html += '<option '+(current == "Monitoring" ? 'selected=""' : "")+'>Monitoring</option>';
+				$("select.actionsSelector").html(_html);
+				
+				create_custom_dropdowns();
+			}
+		}
+				
+		function onselect_change(item){
+			var action = getAction($(".select-dropdown.actionsSelector").find(".current").text().toLowerCase());			
+			var title = getActionTitle($(".select-dropdown.actionsSelector").find(".current").text().toLowerCase());
+			if(action != null){
+				const version = "1";
+				const verb = $(".select-dropdown.verbsSelector").find(".current").text().toUpperCase();
+				const returnType = $(".select-dropdown.returnTypeSelector").find(".current").text().toLowerCase();
+				const ip = "127.0.0.1";
+				const port = 3006;
+				const apikey = $("#apikey").val().trim();
+				
+				$("#code-viewer").parents(".Editors").removeClass("FlexDisplay");
+				codeViewer.setContent("","application/"+returnType.toLowerCase(),true);
+				
+				if(verb == "POST" || verb == "PUT"){
+					resetActions(true, $(".select-dropdown.actionsSelector").find(".current").text());
+				
+					$("#code-editor").parents(".Editors").addClass("FlexDisplay");
+					$(".Parameters").html("");
+					$(".ParametersControl").removeClass("FlexDisplay");
+				}
+				else if(verb == "GET" || verb == "DELETE"){
+					resetActions(false, $(".select-dropdown.actionsSelector").find(".current").text());
+					
+					$("#code-editor").parents(".Editors").removeClass("FlexDisplay");
+					$(".ParametersControl").addClass("FlexDisplay");
+				}
+				
+				if(codeEditor != undefined && codeEditor != null){
+					var data = fetchObject($(".select-dropdown.actionsSelector").find(".current").text().trim());
+					if(data != undefined && data != null){
+						if(returnType == "xml"){
+							var obj = data;
+							if(obj.Results != undefined && obj.Results != null){
+								var _res = [];
+								for(var ii=0; ii<obj.Results.length; ii++){
+									_res.push({"Result" : obj.Results[ii]});
+								}
+								obj.Results = _res;
+							}
+
+							if(obj.Monitoring != undefined && obj.Monitoring != null){	
+								var _mon = [];
+								for(var ii=0; ii<obj.Monitoring.length; ii++){
+									_mon.push({"Monitor" : obj.Monitoring[ii]});
+								}
+								obj.Monitoring = _mon;
+							}
+							
+							var _obj = {};
+							_obj[title] = obj;
+							data = prettifyXml(OBJtoXML(_obj));
+						}
+						else if(returnType == "json"){
+							data = prettifyJson(data);
+						}
+					}
+					else data = "";
+					
+					if(returnType == "xml") codeEditor.setContent(data,"application/xml",true);
+					else if(returnType == "json") codeEditor.setContent(data,"application/json",true);
+				}
+							
+				if(!$("#apikey").parent().hasClass("is-invalid")){
+					let _url = `http://${ip}${port == 80 ? '' : ':'+port}/api/openldr/v${version}/${returnType}/${action}`;
+					var parameters = "";
+					$(".Parameters").children().each(function (index, value) {					
+						var _andOrSelector = $(this).find(".select-dropdown.and-or-Selector").find(".current").text();
+						var _itemSelector = $(this).find(".select-dropdown.itemSelector").find(".current").text();
+						var _equilazerSelector = getEqualizer($(this).find(".select-dropdown.equilazerSelector").find(".current").text());
+						
+						var _value = $(this).find(".ParameterValue").val().trim();
+						
+						if(_andOrSelector != undefined && _andOrSelector != null && _value.length > 0){
+							if(_itemSelector != undefined && _itemSelector != null && _itemSelector != "Choose.."){
+								if(_equilazerSelector != undefined && _equilazerSelector != null){
+									if(index == 0){
+										parameters += "?"+_itemSelector+"="+_equilazerSelector+"."+_value;
+									}
+									else{
+										parameters += "&"+_itemSelector+"."+_andOrSelector.toLowerCase()+"="+_equilazerSelector+"."+_value;
+									}
+								}
+							}
+						}
+					});
+					
+					$("#urlkey").html(_url+parameters);
+				}
+				else $("#urlkey").val("");	
+			}
+		}
+		
+		$(document).ready(function() {
+			create_custom_dropdowns();
+			
+			$("#apikey").on('change', function(){ // keydown paste input
+				var _apikey = $(this).val().trim();
+				if(_apikey.length == 0)$(this).parent().removeClass("is-invalid");
+				else if(_apikey.length > 32)$(this).parent().addClass("is-invalid");
+				else if(_apikey.length == 32){
+					$(this).parent().removeClass("is-invalid");
+				}
+				else $(this).parent().addClass("is-invalid");
+				onselect_change(null);
+			});
+			
+			codeEditor = createEditor("code-editor", {
+				lineNumbers: true,
+				lineWrapping: true,
+				matchBrackets: true,
+				autoCloseBrackets: true,
+				indentUnit: 4,
+				styleActiveLine: true,
+				theme: "dark",
+				mode:  "application/json"				
+			});
+			
+			codeViewer = createEditor("code-viewer", {
+				lineNumbers: true,
+				lineWrapping: true,
+				matchBrackets: true,
+				autoCloseBrackets: true,
+				indentUnit: 4,
+				styleActiveLine: true,
+				theme: "dark",
+				mode:  "application/json"				
+			});
+			
+			codeEditor.refresh();
+			codeViewer.refresh();
+			
+			onselect_change(null);
+		});
+	</script>
+</body>
+</html> 

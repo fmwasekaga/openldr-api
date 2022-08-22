@@ -2,6 +2,7 @@
 const express = require('express');
 const dotenv = require("dotenv");
 const http = require('http');
+const cors = require('cors');
 const app = express();
 
 //define constants
@@ -27,6 +28,7 @@ const {
 } = process.env;
 
 //initiate express app
+app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
@@ -43,8 +45,20 @@ app.set('port', PORT || 3006);
 
 //authenticate requests
 const authentication = async ( req, res, next ) => {
-    //TODO:fix this later
-    next();
+    const token = openldr.fetch_token(req);
+    
+    if (!token) 
+        return res.status(403).send("A token is required for authentication");
+
+    try {
+        //TODO: authenticate token example below
+        //const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+        //req.user = decoded;
+
+    } catch (err) {
+        return res.status(401).send("Invalid Token");
+    }
+    return next();
 }
 
 //TODO:implement later
@@ -277,11 +291,26 @@ app.delete("/api/openldr/:version/:returntype/:action", authentication, async (r
     else return openldr.toFormatedResponse(res, 501, returntype, 'Error', "Unimplemented version");
 });
 
-//default routes
-app.get('/*', default_route);
-app.post('/*', default_route);
-app.put('/*', default_route);
-app.delete('/*', default_route);
+//404 not found
+app.use(function(req, res, next) {
+    res.status(404);
+  
+    // respond with html page
+    if (req.accepts('html')) {
+        res.send("Not found!")
+      //res.render('404', { url: req.url });
+        return;
+    }
+  
+    // respond with json
+    if (req.accepts('json')) {
+        res.json({ error: 'Not found' });
+        return;
+    }
+  
+    // default to plain-text. send()
+    res.type('txt').send('Not found');
+});
 
 //start http server
 http.createServer(app).listen(app.get('port'), function(){
