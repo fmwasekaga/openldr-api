@@ -1,4 +1,4 @@
-Open Laboratory Data Repository - API
+Open Laboratory Data Repository (OpenLDR) - API
 ======
 
 ![](/public/img/version.svg) ![](/public/img/license.svg) ![](/public/img/database_platforms.svg)
