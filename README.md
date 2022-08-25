@@ -3,7 +3,7 @@ Open Laboratory Data Repository (OpenLDR) - API
 
 ![](/public/img/version.svg) ![](/public/img/license.svg) ![](/public/img/database_platforms.svg)
 
-The OpenLDR provides a communication layer for a single storage location for the country-wide electronic data regarding laboratory 
+The OpenLDR API tool provides a communication layer for a single storage location for the country-wide electronic data regarding laboratory 
 requests and results. This allows laboratory systems managers to easily view relevant data on the entire 
 country, different geographic levels or detailed data down to the lab and section. A major design goal of 
 the OpenLDR is to accommodate data from laboratories which use disparate Laboratory Information Management 
